@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prayogo Pangestu — Front-End Developer & Logo Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grid-overlay"></div>
+<div class="scanline"></div>
+
+<header>
+  <div class="brand"><span class="dot"></span>PRAYOGO<span style="color:var(--red-web)">.</span>DEV</div>
+  <nav class="nav-links" id="navLinks">
+    <a href="#about">Tentang</a>
+    <a href="#skills">Keahlian</a>
+    <a href="#projects">Proyek</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+  <button class="burger" id="burger"><i class="fa-solid fa-bars"></i></button>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <canvas id="webCanvas"></canvas>
+  <div class="hero-inner">
+    <span class="eyebrow"><i class="fa-solid fa-bolt"></i> SYSTEM ONLINE — SIAP MEMBANGUN</span>
+    <h1>Halo, saya <span class="accent">Prayogo Pangestu</span></h1>
+    <p class="role">Saya seorang <span class="typed" id="typedText">Front-End Developer</span></p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">LIHAT PROYEK <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#contact" class="btn btn-ghost">HUBUNGI SAYA</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>SCROLL</span><div class="bar"></div></div>
+</section>
+
+<!-- ===== ABOUT (background dengan animasi spiderman) ===== -->
+<section id="about">
+  <div class="section-head reveal">
+    <span class="tag">// TENTANG SAYA</span>
+    <h2>Merakit Antarmuka Seperti Merakit Mesin</h2>
+  </div>
+  <div class="about-wrap reveal">
+
+    <!-- kotak visual berisi animasi spiderman bergelantungan -->
+    <div class="about-visual" id="aboutVisual">
+      <div class="swing-rig">
+        <div class="web-line"></div>
+        <svg class="spidey-figure" viewBox="0 0 60 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- kepala -->
+          <circle cx="30" cy="14" r="10" fill="#0b0f1a" stroke="#ff1f3d" stroke-width="2"/>
+          <!-- badan -->
+          <path d="M18 24 Q30 20 42 24 L38 62 Q30 68 22 62 Z" fill="#8c1022" stroke="#ff1f3d" stroke-width="1.5"/>
+          <!-- lengan kiri terangkat (pose menembak jaring) -->
+          <path d="M20 30 Q4 26 2 8" fill="none" stroke="#0b0f1a" stroke-width="6" stroke-linecap="round"/>
+          <path d="M20 30 Q4 26 2 8" fill="none" stroke="#ff1f3d" stroke-width="2" stroke-linecap="round"/>
+          <!-- lengan kanan -->
+          <path d="M40 30 Q54 40 50 58" fill="none" stroke="#0b0f1a" stroke-width="6" stroke-linecap="round"/>
+          <path d="M40 30 Q54 40 50 58" fill="none" stroke="#ff1f3d" stroke-width="2" stroke-linecap="round"/>
+          <!-- kaki kiri -->
+          <path d="M24 62 Q14 78 20 96" fill="none" stroke="#0b0f1a" stroke-width="7" stroke-linecap="round"/>
+          <path d="M24 62 Q14 78 20 96" fill="none" stroke="#ff1f3d" stroke-width="2" stroke-linecap="round"/>
+          <!-- kaki kanan -->
+          <path d="M36 62 Q48 72 44 92" fill="none" stroke="#0b0f1a" stroke-width="7" stroke-linecap="round"/>
+          <path d="M36 62 Q48 72 44 92" fill="none" stroke="#ff1f3d" stroke-width="2" stroke-linecap="round"/>
+          <!-- lensa mata bercahaya -->
+          <ellipse cx="25" cy="13" rx="4" ry="2.6" fill="#00e5ff"/>
+          <ellipse cx="35" cy="13" rx="4" ry="2.6" fill="#00e5ff"/>
+        </svg>
+      </div>
+      <canvas id="webShootCanvas"></canvas>
+      <span class="hint-tap">[ KLIK UNTUK TEMBAK JARING ]</span>
+    </div>
+
+    <div class="about-text">
+      <h3>Front-End Developer & Logo Designer</h3>
+      <p>Saya senang mengubah ide menjadi antarmuka yang hidup — cepat, rapi, dan enak dipakai. Bagi saya, sebuah website yang baik itu seperti jaring laba-laba: setiap benang (kode) saling terhubung, kuat, dan bergerak mengikuti penggunanya.</p>
+      <p>Selain membangun tampilan web, saya juga merancang logo dan identitas visual untuk brand — memadukan bentuk yang simpel dengan makna yang kuat, supaya mudah diingat dan tetap relevan di berbagai media.</p>
+      <div class="stats">
+        <div>
+          <div class="stat-num" data-count="8">0</div>
+          <div class="stat-label">PROYEK DIBUAT</div>
+        </div>
+        <div>
+          <div class="stat-num" data-count="3">0</div>
+          <div class="stat-label">TAHUN BELAJAR</div>
+        </div>
+        <div>
+          <div class="stat-num" data-count="100">0</div>
+          <div class="stat-label">% NGEBUT NGODING</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="section-head reveal">
+    <span class="tag">// KEAHLIAN</span>
+    <h2>Perangkat Keahlian</h2>
+    <p>Teknologi dan tools yang saya gunakan untuk membangun antarmuka web dan aset desain logo.</p>
+  </div>
+  <div class="skills-grid reveal">
+    <div class="skill-row"><div class="skill-top"><span>HTML5 & CSS3</span><span>95%</span></div><div class="bar-track"><div class="bar-fill" data-width="95"></div></div></div>
+    <div class="skill-row"><div class="skill-top"><span>JavaScript</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-width="85"></div></div></div>
+    <div class="skill-row"><div class="skill-top"><span>Desain Logo & Branding</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-width="90"></div></div></div>
+    <div class="skill-row"><div class="skill-top"><span>Figma</span><span>88%</span></div><div class="bar-track"><div class="bar-fill" data-width="88"></div></div></div>
+    <div class="skill-row"><div class="skill-top"><span>Responsive Design</span><span>92%</span></div><div class="bar-track"><div class="bar-fill" data-width="92"></div></div></div>
+    <div class="skill-row"><div class="skill-top"><span>Adobe Illustrator / CorelDRAW</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-width="80"></div></div></div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS (dirender otomatis dari data/projects.js) ===== -->
+<section id="projects">
+  <div class="section-head reveal">
+    <span class="tag">// PROYEK</span>
+    <h2>8 Proyek Pilihan</h2>
+    <p>Cara mengganti: buka file <span class="mono" style="color:var(--cyan-core)">data/projects.js</span> dan ubah nilai <span class="mono" style="color:var(--red-web)">title</span>, <span class="mono" style="color:var(--red-web)">desc</span>, <span class="mono" style="color:var(--red-web)">image</span>, dan <span class="mono" style="color:var(--red-web)">link</span> untuk tiap proyek.</p>
+  </div>
+  <div class="proj-grid reveal" id="projGrid">
+    <!-- Kartu proyek dibuat otomatis lewat JavaScript (lihat js/main.js) -->
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="section-head reveal">
+    <span class="tag">// KONTAK</span>
+    <h2>Mari Terhubung</h2>
+    <p>Punya proyek atau ingin kolaborasi? Hubungi saya lewat salah satu jaring di bawah ini.</p>
+  </div>
+  <div class="contact-grid reveal">
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+      <h3>WhatsApp</h3>
+      <a class="wrap-link" href="https://wa.me/6285609800406" target="_blank"><p>085609800406</p></a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+      <h3>Instagram</h3>
+      <a class="wrap-link" href="https://instagram.com/prayogo8840" target="_blank"><p>@prayogo8840</p></a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+      <h3>Gmail</h3>
+      <a class="wrap-link" href="mailto:prayogo.pangestu276@smk.belajar.id"><p>prayogo.pangestu276@smk.belajar.id</p></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Prayogo Pangestu <span class="dot">•</span> Dibangun dengan kode, kopi, dan sedikit jaring laba-laba.</p>
+</footer>
+
+<!-- data proyek dimuat lebih dulu supaya main.js bisa memakainya -->
+<script src="data/projects.js"></script>
+<script src="js/webcanvas.js"></script>
+<script src="js/spiderman.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
